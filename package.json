@@ -1,0 +1,84 @@
+{
+  "name": "react-native-language-translation",
+  "version": "2.1.4",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "tslint -p tsconfig.json 'src/**/*.tsx'",
+    "tslint": "tslint -p tsconfig.json 'src/**/*.tsx' 'src/**/*.ts'",
+    "test": "node_modules/.bin/jest --coverage",
+    "testu": "TZ=UTC node_modules/.bin/jest --updateSnapshot",
+    "test:seq": "node_modules/.bin/jest --coverage --runInBand",
+    "clean-test-cache": "node_modules/.bin/jest --clearCache"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "i18next": "^19.8.4",
+    "react-native-config": "^0.11.7",
+    "react-native-localize": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/enzyme": "^3.9.1",
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.9",
+    "@types/react-native": "^0.57.41",
+    "@types/react-test-renderer": "^16.8.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^25.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "jest": "^24.5.0",
+    "metro-react-native-babel-preset": "0.53.1",
+    "prettier": "^1.16.4",
+    "react-test-renderer": "16.8.5",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.14.0",
+    "tslint-config-airbnb-base": "^0.3.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.2.4",
+    "jest-fetch-mock": "^2.1.1",
+    "enzyme-to-json": "^3.3.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./config/jest.setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.(js|ts|tsx)",
+      "**/?(*.)+(spec|test).(js|ts|tsx)"
+    ],
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "verbose": true,
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    }
+  }
+}

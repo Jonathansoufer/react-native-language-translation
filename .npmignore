@@ -1,0 +1,5 @@
+coverage
+flow-coverage
+flow-typed
+bitrise.yml
+.gitlab-ci.yml
